@@ -19,7 +19,7 @@ public class Main {
             ArrayList<Slide> slides=pictureDataset.genSlides();
             final SlideShowMaker slideShowMaker=new SlideShowMaker();
 
-            ArrayList<Slide> optimizedSlides=slideShowMaker.buildSlideShow(slides);
+            ArrayList<Slide> optimizedSlides=GraphShow.buildGraphShow(slides);
 
             for(final Slide s:optimizedSlides){
                 System.out.println(s.toString());
