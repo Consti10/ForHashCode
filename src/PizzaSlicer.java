@@ -10,12 +10,10 @@ public class PizzaSlicer {
     public PizzaSlicer(final String name) throws IOException {
         pizza=new Pizza(name);
         System.out.println(pizza.toString());
+        pizza.sliceSimple();
     }
 
 
-    public void slice(){
-
-    }
 
 
 
