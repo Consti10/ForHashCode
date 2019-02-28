@@ -14,7 +14,10 @@ public class Main {
 
     private static final String[] FILENAMES_INPUT={
             "a_example",
-
+            "b_lovely_landscapes",
+            "c_memorable_moments",
+            "d_pet_pictures",
+            "e_shiny_selfies"
     };
 
 
@@ -28,8 +31,9 @@ public class Main {
         }
     }
 
-
+    
     public static void GenerateData(final String inputFilename,final String outputFilename) throws IOException {
+
         PictureDataset pictureDataset=new PictureDataset(inputFilename);
         System.out.println(pictureDataset.toString());
 
