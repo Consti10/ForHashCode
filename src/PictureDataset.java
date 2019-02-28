@@ -2,6 +2,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 @SuppressWarnings("WeakerAccess")
 public class PictureDataset {
@@ -31,6 +32,13 @@ public class PictureDataset {
                 pictures.add(new Picture(format,tags));
             }
         }
+    }
+
+    public List<Slide> genSlides(){
+        List<Picture> vpics = new ArrayList();
+        
+
+
     }
 
     //For testing/ debugging

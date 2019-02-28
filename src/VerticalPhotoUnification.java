@@ -14,7 +14,7 @@ public class VerticalPhotoUnification {
      */
     public List<Slide> naiveUnify(List<Picture> list){
         List<Picture> downlist = new ArrayList<>(list);
-        downlist.sort(Comparator.comparing(Photo::getLength));
+        downlist.sort(Comparator.comparing(Picture::getLength));
         if (downlist.size() % 2 == 1) downlist.remove(0);//odd lists are a problem: drop one with least number of tags
         List<Picture> uplist = new ArrayList<>(downlist);
         Collections.reverse(uplist);
