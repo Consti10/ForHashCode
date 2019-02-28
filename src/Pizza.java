@@ -4,6 +4,7 @@ import java.io.IOException;
 
 @SuppressWarnings("WeakerAccess")
 public class Pizza {
+    //Variable names follow the definitions in the Problem Statement
     final int R;
     final int C;
     final int L;
