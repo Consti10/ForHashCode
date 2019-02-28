@@ -11,6 +11,12 @@ public class Picture {
         this.tags=new ArrayList<>(Arrays.asList(tags));
     }
 
+
+    public int getLength() {
+        return tags.size();
+    }
+
+
     @Override
     public String toString(){
         StringBuilder builder=new StringBuilder();
