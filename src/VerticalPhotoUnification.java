@@ -20,7 +20,7 @@ public class VerticalPhotoUnification {
         List<Picture> uplist = new ArrayList<>(downlist);
         Collections.reverse(uplist);
         List<Slide> res = new ArrayList<>(downlist.size());
-        for (int i = 0; i < downlist.size(); i++) {
+        for (int i = 0; i < downlist.size()/2; i++) {
             //List<String> slideTags = new ArrayList<>(uplist.get(i).tags.size()+downlist.get(i).tags.size());
             //slideTags.addAll(uplist.get(i).tags);
             //slideTags.addAll(downlist.get(i).tags);
