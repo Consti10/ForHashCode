@@ -73,7 +73,7 @@ public class PictureDataset {
             builder.append("\n");
         }
         try {
-            Files.write(Paths.get(filename), builder.toString().getBytes());
+            Files.write(Paths.get(filename),builder.toString().getBytes());
         } catch (IOException e) {
             e.printStackTrace();
         }
