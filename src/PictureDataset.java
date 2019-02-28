@@ -1,6 +1,8 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -29,14 +31,14 @@ public class PictureDataset {
                 for(int t=0;t<nTags;t++){
                     tags[t]=tmp[t+2];
                 }
-                pictures.add(new Picture(format,tags));
+                pictures.add(new Picture(format,tags,i));
             }
         }
     }
 
-    public List<Slide> genSlides() {
+    public ArrayList<Slide> genSlides() {
         ArrayList<Picture> vpics = new ArrayList();
-        List<Slide> slides = new ArrayList<>();
+        ArrayList<Slide> slides = new ArrayList<>();
         for (Picture picture : pictures) {
             if (picture.format == 'V') {
                 vpics.add(picture);
@@ -60,4 +62,21 @@ public class PictureDataset {
         return builder.toString();
     }
 
+
+    public static void CreateOutputFile(final String filename,final ArrayList<Slide> slides){
+        StringBuilder builder=new StringBuilder();
+        builder.append(slides.size()).append("\n");
+        for(final Slide slide:slides){
+            for(Picture p:slide.pictures){
+                builder.append(p.indx).append(" ");
+            }
+            builder.append("\n");
+        }
+        try {
+            Files.write(Paths.get(filename), builder.toString().getBytes());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
 }

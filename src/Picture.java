@@ -5,10 +5,12 @@ import java.util.Arrays;
 public class Picture {
     final char format;
     ArrayList<String> tags;
+    final int indx;
 
-    Picture(final char format, final String[] tags){
+    Picture(final char format, final String[] tags,final int idx){
         this.format=format;
         this.tags=new ArrayList<>(Arrays.asList(tags));
+        this.indx=idx;
     }
 
 
