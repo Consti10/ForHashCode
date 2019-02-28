@@ -7,7 +7,7 @@ import java.util.List;
 public class SlideShowMaker {
 
 	//Erstellt eine Liste aller gemeinsamen Elemente
-	private List<String> calculateCommon(Slide a, Slide b) {
+	private static List<String> calculateCommon(Slide a, Slide b) {
 		
 		List<String> ausgabe = new ArrayList<String>(0);
 		
@@ -23,7 +23,7 @@ public class SlideShowMaker {
 		return ausgabe;
 	}
 
-	private int calculateScore(Slide a, Slide b) {
+	public static int calculateScore(Slide a, Slide b) {
 		
 		List<String> common = calculateCommon(a, b);
 		int anzahlCommon = common.size();
@@ -35,6 +35,8 @@ public class SlideShowMaker {
 		return Math.min(Math.min(leftJoined, rightJoined), anzahlCommon);
 		
 	}
+
+
 	
 	public List<Slide> buildSlideShow(List<Slide> eingabe) {
 		
