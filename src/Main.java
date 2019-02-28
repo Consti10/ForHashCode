@@ -1,4 +1,5 @@
 import java.io.IOException;
+import java.util.List;
 
 public class Main {
 
@@ -13,6 +14,12 @@ public class Main {
         try {
             PictureDataset pictureDataset=new PictureDataset(FILENAME_1);
             System.out.println(pictureDataset.toString());
+
+            List<Slide> slides=pictureDataset.genSlides();
+            for(final Slide s:slides){
+                System.out.println(slides.toString());
+            }
+
         } catch (IOException e) {
             e.printStackTrace();
         }

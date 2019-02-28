@@ -21,10 +21,10 @@ public class VerticalPhotoUnification {
         Collections.reverse(uplist);
         List<Slide> res = new ArrayList<>(downlist.size());
         for (int i = 0; i < downlist.size(); i++) {
-            List<String> slideTags = new ArrayList<>(uplist.get(i).tags.size()+downlist.get(i).tags.size());
-            slideTags.addAll(uplist.get(i).tags);
-            slideTags.addAll(downlist.get(i).tags);
-            res.add(i, new Slide(slideTags));
+            //List<String> slideTags = new ArrayList<>(uplist.get(i).tags.size()+downlist.get(i).tags.size());
+            //slideTags.addAll(uplist.get(i).tags);
+            //slideTags.addAll(downlist.get(i).tags);
+            res.add(i, new Slide(uplist.get(i),downlist.get(i)));
         }
         return res;
     }

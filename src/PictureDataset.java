@@ -35,18 +35,19 @@ public class PictureDataset {
     }
 
     public List<Slide> genSlides() {
-        List<Picture> vpics = new ArrayList();
+        ArrayList<Picture> vpics = new ArrayList();
         List<Slide> slides = new ArrayList<>();
         for (Picture picture : pictures) {
             if (picture.format == 'V') {
                 vpics.add(picture);
             } else {
-                slides.add(new Slide(picture.tags));
+                slides.add(new Slide(picture));
             }
         }
         slides.addAll(VerticalPhotoUnification.naiveUnify(vpics));
         return slides;
     }
+
 
     //For testing/ debugging
     @Override

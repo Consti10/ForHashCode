@@ -1,16 +1,32 @@
 import java.util.ArrayList;
 import java.util.List;
 
+@SuppressWarnings("WeakerAccess")
 public class Slide {
 
-	public List<String> tags;
+	//1 oder 2 lang
+	public final ArrayList<Picture> pictures;
+	//are calculated in the constructors
+	public final ArrayList<String> tags;
 
-
-	public Slide(List<String> tags) {
-
-		this.tags = new ArrayList<>(tags);
+	public Slide(Picture p1){
+		pictures=new ArrayList<>();
+		pictures.add(p1);
+		tags=new ArrayList<>();
+		for(final Picture p:pictures){
+			tags.addAll(p.tags);
+		}
 	}
 
+	public Slide(Picture p1,Picture p2){
+		pictures=new ArrayList<>();
+		pictures.add(p1);
+		pictures.add(p2);
+		tags=new ArrayList<>();
+		for(final Picture p:pictures){
+			tags.addAll(p.tags);
+		}
+	}
 
 
 	@Override
