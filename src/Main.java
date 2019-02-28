@@ -6,11 +6,8 @@ public class Main {
 
     //private final SlideShowMaker slideShowMaker=new SlideShowMaker();
 
-
-    public static final String FOLDER ="C:\\Users\\Constantin\\IdeaProjects\\ForHashCode\\PictureData";
-
-    private static final String FILENAME_1=FOLDER+"\\a_example.txt";
-    private static final String RESULT=FOLDER+"\\result.txt";
+    private static final String FILENAME_1=".\\PictureData\\a_example.txt";
+    private static final String RESULT=".\\PictureData\\result.txt";
 
 
     public static void main(String[] args) {
