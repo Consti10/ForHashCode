@@ -25,7 +25,7 @@ public class VerticalPhotoUnification {
             slideTags.addAll(downlist.get(i).tags);
             res.add(i, new Slide(slideTags));
         }
-
+        return res;
     }
 
 
