@@ -10,7 +10,7 @@ public class SlideShowMaker {
 	//Erstellt eine Liste aller gemeinsamen Elemente
 	private List<String> calculateCommon(Slide a, Slide b) {
 		
-		List<String> ausgabe = new ArrayList<String>(0);
+		ArrayList<String> ausgabe = new ArrayList<String>(0);
 		
 		for (int index = 0; index < a.tags.size(); index++) {
 
@@ -20,8 +20,6 @@ public class SlideShowMaker {
 				}
 			}		
 		}
-		
-		
 		return ausgabe;
 	}
 
