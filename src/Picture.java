@@ -7,6 +7,9 @@ public class Picture {
     ArrayList<String> tags;
     final int indx;
 
+    public static final char HORIZONTAL='H'; //single horizontal
+    public static final char VERTICAL='V'; //two vertical
+
     Picture(final char format, final String[] tags,final int idx){
         this.format=format;
         this.tags=new ArrayList<>(Arrays.asList(tags));
